@@ -27,6 +27,12 @@ services:
     build: ./composer
     volumes_from:
       - data
+  artisan:
+    build: ./artisan
+    volumes_from:
+      - data
+    links:
+      -  db:db
   gulp:
     build: ./gulp
     volumes_from:
