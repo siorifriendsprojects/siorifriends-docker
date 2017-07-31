@@ -11,10 +11,14 @@ services:
         - data
     environment:
       MYSQL_ROOT_PASSWORD: pass
+    ports:
+      - "3306:3306"
   fpm:
     build: ./fpm
     volumes_from:
       - data
+    links:
+      -  db:db
   nginx:
     build: ./nginx
     volumes_from:
