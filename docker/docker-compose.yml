@@ -4,7 +4,7 @@ services:
     build: ./data
     volumes:
       - ../:/data
-      - /var/lib/mysql
+      - ./data/mariadb:/var/lib/mysql
   db:
     image: mariadb:10.2.6
     volumes_from:

@@ -66,3 +66,6 @@ fabric.properties
 
 # Logfiles
 /log/
+
+# DB data directory
+/docker/data/mariadb/
